@@ -16,11 +16,16 @@
         <h1>Resultado Final</h1>
         <?php
         $n = $_GET["numero"];
-        $ValorAbsoluto = round($n);
-        $ValorFracionado = $n - floor($n);
+
+        $ValorAbsoluto = (int) $n;
+
+        $ValorFracionado = $n - $ValorAbsoluto;
+
         $ValorF = round($ValorFracionado, 3);
+
         echo "<p>Analisando o número <strong>$n</strong> informado pelo usuário</p>";
-        echo "<ul>
+
+        echo "<ul> 
                 <li>A parte inteira do número é <strong>$ValorAbsoluto</strong></li>
                 <li>A parte fracionada do número é <strong>$ValorF</strong></li>
             </ul>";
