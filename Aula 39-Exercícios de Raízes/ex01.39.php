@@ -14,7 +14,8 @@
         <h1>Apresente-se para nós</h1>
     </header>
     <section>
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
+        <form action="<?php  echo $_SERVER['PHP_SELF'] ?>" method="get">
+            
 
             <label for="Número">Número</label>
             <input type="number" name="numero" id="numero" value="<?=$numero?>">
@@ -25,11 +26,10 @@
     <section>
         <h2>Resultado Final</h2>
         <?php 
+            $raizCubica = pow($numero, 1/3);
             echo"<p> Analisando o <strong>número $numero</strong> temos: </p>";
-            echo"<on>
-                    <li>A sua raiz quadrada é
-                    <li>A sua raiz cúbica é
-                </on>";
+            echo"<li> A sua raiz quadrada é " . "<strong>" . sqrt($numero) . "</strong>";
+            echo"<li> A sua raiz quadrada cúbica é " . "<strong>" . $raizCubica . "</strong>";
         ?>
     </section>
 </body>
