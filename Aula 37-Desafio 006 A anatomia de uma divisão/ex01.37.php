@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Interação com Formulários</title>
+    <title>Desafio de PHP</title>
 </head>
 <body>
     <?php 
@@ -29,13 +29,20 @@
     <section>
         <h2>Resultado da Soma</h2>
         <?php 
-            $resultado = $dividendo / $divisor;
+            $resultado = intdiv($dividendo, $divisor);
             $resto = $dividendo % $divisor;
-            echo "<p>O dividendo é <strong>$dividendo</strong></p>";
-            echo "<p>O divisor é <strong>$divisor</strong></p>";
-            echo "<p>O resultado é " . number_format($resultado, 2);
-            echo "<p>O resto é $resto </p>";
         ?>
+
+        <table class="divisao">
+            <tr>
+                <td><?=$dividendo?></td>
+                <td><?=$divisor?></td>
+            </tr>
+            <tr>
+                <td><?=$resto?></td>
+                <td><?=$resultado?></td>
+            </tr>
+        </table>
     </section>
 </body>
 </html>
