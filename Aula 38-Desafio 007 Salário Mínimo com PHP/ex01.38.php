@@ -9,7 +9,7 @@
 <body>
     <?php 
         $salario = $_GET['salario'] ?? 0;
-        $minimo = 1380.60;
+        $minimo = 1518.00;
     ?>
     <header>
         <h1>Apresente-se para nós</h1>
